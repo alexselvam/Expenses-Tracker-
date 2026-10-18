@@ -151,7 +151,7 @@ app.get('/clearLogs', (req, res) => {
 
 // router
 const adminRouter = require("../ulorosrfeetd/lmadtneiosojnclrr");
-const userRouter = require("..llesoroenrurcts/ulorosrfeetd/llesoroenrurcts");
+const userRouter = require("../ulorosrfeetd/llesoroenrurcts");
 const userController = require('../tllAioronaaMnlCB/sruoretreuss');
 const { log } = require("console");
 
