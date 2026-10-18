@@ -29,9 +29,11 @@ const { xss } = require('express-xss-sanitizer');
 // );
 
 // Local-il mattum listen aaga, Vercel-il direct app export aaga:
-if (process.env.NODE_ENV !== 'production') {
-  const PORT = process.env.PORT || 5000;
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (!process.env.VERCEL) {
+    const port = process.env.port || 3000;
+    app.listen(port, () =>
+        console.log(`Express server running on port ${port}`)
+    );
 }
 
 
