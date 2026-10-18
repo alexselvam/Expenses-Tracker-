@@ -1,0 +1,347 @@
+<div class="dashboard-root">
+
+    <!-- Header -->
+    <header class="banner-section">
+        <div class="banner-brand">
+            <div class="excel-logo-box">X</div>
+            <div class="brand-text">
+                <h2 class="sub-title">ONLINE STORE</h2>
+                <h1 class="main-title">SALES DASHBOARD</h1>
+            </div>
+        </div>
+
+        <div class="banner-slogan">Track • Analyze • Grow</div>
+
+        <div class="banner-badge">
+            REAL INSIGHTS. SMART DECISIONS. HIGHER SALES. 📈
+        </div>
+
+        <!-- Dynamic file upload -->
+        <div class="banner-upload-bar">
+            <label class="btn-upload" [class.disabled]="isProcessing()">
+                <span>
+                    {{ isProcessing() ? '⏳ Processing...' : '📂 Upload Excel / CSV / PDF / Image' }}
+                </span>
+
+                <input type="file"
+                    accept=".xlsx, .xls, .csv, .pdf, .png, .jpg, .jpeg, .webp, image/png, image/jpeg, image/webp"
+                    (change)="onFileSelect($event)" [disabled]="isProcessing()" hidden />
+            </label>
+
+            <span class="file-status">{{ fileName() }}</span>
+
+            @if (isProcessing()) {
+            <span class="badge-busy">Loading...</span>
+            }
+
+            @if (errorMessage()) {
+            <span class="error-message">{{ errorMessage() }}</span>
+            }
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-ribbon">
+        @for (item of navItems; track item.id) {
+        <button type="button" class="nav-tab" [class.active]="activeTab() === item.id" (click)="setTab(item.id)">
+            <span class="nav-icon">{{ item.icon }}</span>
+            <span>{{ item.label }}</span>
+        </button>
+        }
+    </nav>
+
+    <!-- Loading state -->
+    <div *ngIf="isProcessing()">
+        Loading dashboard data...
+    </div>
+
+    <div *ngIf="errorMessage()" class="error-message">
+        {{ errorMessage() }}
+    </div>
+
+    <!-- KPI Cards -->
+    <section class="kpi-row">
+
+        <div class="kpi-card">
+            <div class="kpi-icon-bubble green">💲</div>
+            <div class="kpi-meta">
+                <span class="kpi-heading">TOTAL SALES</span>
+                <div class="kpi-number">
+                    ${{ kpis().totalSales | number:'1.0-2' }}
+                </div>
+                <span class="kpi-trend" [class.text-green]="kpis().salesGrowth >= 0"
+                    [class.text-red]="kpis().salesGrowth < 0">
+                    {{ kpis().salesGrowth >= 0 ? '↑' : '↓' }}
+                    {{ kpis().salesGrowth | number:'1.1-2' }}% vs Last Month
+                </span>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon-bubble blue">🛒</div>
+            <div class="kpi-meta">
+                <span class="kpi-heading">TOTAL ORDERS</span>
+                <div class="kpi-number">
+                    {{ kpis().totalOrders | number }}
+                </div>
+                <span class="kpi-trend" [class.text-blue]="kpis().ordersGrowth >= 0"
+                    [class.text-red]="kpis().ordersGrowth < 0">
+                    {{ kpis().ordersGrowth >= 0 ? '↑' : '↓' }}
+                    {{ kpis().ordersGrowth | number:'1.1-2' }}% vs Last Month
+                </span>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon-bubble purple">👥</div>
+            <div class="kpi-meta">
+                <span class="kpi-heading">TOTAL CUSTOMERS</span>
+                <div class="kpi-number">
+                    {{ kpis().totalCustomers | number }}
+                </div>
+                <span class="kpi-trend" [class.text-purple]="kpis().customersGrowth >= 0"
+                    [class.text-red]="kpis().customersGrowth < 0">
+                    {{ kpis().customersGrowth >= 0 ? '↑' : '↓' }}
+                    {{ kpis().customersGrowth | number:'1.1-2' }}% vs Last Month
+                </span>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon-bubble orange">🛍️</div>
+            <div class="kpi-meta">
+                <span class="kpi-heading">AVERAGE ORDER VALUE</span>
+                <div class="kpi-number">
+                    ${{ kpis().avgOrderValue | number:'1.2-2' }}
+                </div>
+                <span class="kpi-trend" [class.text-orange]="kpis().aovGrowth >= 0"
+                    [class.text-red]="kpis().aovGrowth < 0">
+                    {{ kpis().aovGrowth >= 0 ? '↑' : '↓' }}
+                    {{ kpis().aovGrowth | number:'1.1-2' }}% vs Last Month
+                </span>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="kpi-icon-bubble teal">🎯</div>
+            <div class="kpi-meta">
+                <span class="kpi-heading">CONVERSION RATE</span>
+                <div class="kpi-number">
+                    {{ kpis().conversionRate | number:'1.1-2' }}%
+                </div>
+                <span class="kpi-trend" [class.text-teal]="kpis().conversionGrowth >= 0"
+                    [class.text-red]="kpis().conversionGrowth < 0">
+                    {{ kpis().conversionGrowth >= 0 ? '↑' : '↓' }}
+                    {{ kpis().conversionGrowth | number:'1.1-2' }}% vs Last Month
+                </span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Sales charts -->
+    <section class="charts-grid-2">
+
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">SALES OVER TIME</h3>
+                <span class="panel-badge-green">
+                    {{ kpis().salesGrowth >= 0 ? '↑' : '↓' }}
+                    {{ kpis().salesGrowth | number:'1.1-2' }}% vs Last Month
+                </span>
+            </div>
+
+            <div class="canvas-container">
+                <canvas #salesTimeCanvas></canvas>
+            </div>
+        </div>
+
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">SALES BY CHANNEL</h3>
+            </div>
+
+            <div class="canvas-container donut-box">
+                <canvas #channelCanvas></canvas>
+
+                <div class="donut-center-text">
+                    <div class="donut-center-val">
+                        ${{ kpis().totalSales | number:'1.0-2' }}
+                    </div>
+                    <div class="donut-center-sub">Total Sales</div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Category, regions and products -->
+    <section class="charts-grid-3">
+
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">SALES BY CATEGORY</h3>
+            </div>
+
+            <div class="canvas-container">
+                <canvas #categoryCanvas></canvas>
+            </div>
+        </div>
+
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">SALES BY REGION</h3>
+            </div>
+
+            <div class="region-content">
+
+                <div class="world-map-svg-wrap">
+                    <svg viewBox="0 0 400 200" class="world-svg" fill="#a7f3d0">
+                        <path d="M40,50 Q60,40 100,55 Q130,70 120,100 Q90,110 70,90 Z" fill="#86efac" opacity="0.9" />
+                        <path d="M90,115 Q120,115 110,160 Q95,185 85,150 Z" fill="#6ee7b7" opacity="0.8" />
+                        <path d="M170,45 Q210,35 220,65 Q190,80 175,70 Z" fill="#34d399" opacity="0.9" />
+                        <path d="M175,85 Q220,80 215,145 Q190,165 170,120 Z" fill="#a7f3d0" opacity="0.7" />
+                        <path d="M230,45 Q330,40 340,90 Q300,120 240,95 Z" fill="#10b981" opacity="0.95" />
+                        <path d="M300,135 Q340,130 335,165 Q310,170 295,150 Z" fill="#34d399" opacity="0.8" />
+                    </svg>
+                </div>
+
+                <div class="region-table">
+                    @for (reg of regions(); track reg.name) {
+                    <div class="region-row">
+                        <span class="region-dot" [style.backgroundColor]="reg.color">
+                        </span>
+
+                        <span class="region-name">{{ reg.name }}</span>
+                        <span class="region-sales">
+                            ${{ reg.sales | number:'1.0-2' }}
+                        </span>
+                        <span class="region-pct">
+                            {{ reg.percentage | number:'1.0-2' }}%
+                        </span>
+                    </div>
+                    } @empty {
+                    <p class="empty-state">No region data available.</p>
+                    }
+                </div>
+
+            </div>
+        </div>
+
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">TOP PRODUCTS BY SALES</h3>
+            </div>
+
+            <div class="products-stack">
+                @for (item of topProducts(); track item.rank) {
+                <div class="product-item-card">
+                    <span class="rank-num">{{ item.rank }}</span>
+                    <span class="product-glyph">{{ item.icon }}</span>
+                    <span class="product-title">{{ item.name }}</span>
+                    <span class="product-revenue">
+                        ${{ item.sales | number:'1.0-2' }}
+                    </span>
+                </div>
+                } @empty {
+                <p class="empty-state">No product data available.</p>
+                }
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Customers, funnel, heatmap -->
+    <section class="charts-grid-3">
+
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">NEW VS RETURNING</h3>
+            </div>
+
+            <div class="canvas-container donut-box">
+                <canvas #customersCanvas></canvas>
+
+                <div class="donut-center-text">
+                    <div class="donut-center-val">
+                        {{ kpis().totalCustomers | number }}
+                    </div>
+                    <div class="donut-center-sub">Total Customers</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">SALES FUNNEL</h3>
+            </div>
+
+            <div class="funnel-stack">
+                @for (step of funnelSteps(); track step.label) {
+                <div class="funnel-row">
+                    <div class="funnel-polygon" [style.width]="step.width" [style.backgroundColor]="step.color">
+                        <span class="funnel-lbl">{{ step.label }}</span>
+                        <span class="funnel-val">{{ step.value }}</span>
+                    </div>
+                </div>
+                } @empty {
+                <p class="empty-state">No funnel data available.</p>
+                }
+            </div>
+        </div>
+
+        <div class="dashboard-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">SALES HEATMAP (DAY & HOUR)</h3>
+            </div>
+
+            <div class="heatmap-wrapper">
+                <div class="heatmap-matrix">
+
+                    <div class="cell-blank"></div>
+
+                    @for (hour of heatmapHours; track hour) {
+                    <div class="cell-hour-header">{{ hour }}</div>
+                    }
+
+                    @for (day of heatmapDays; track day; let d = $index) {
+                    <div class="cell-day-header">{{ day }}</div>
+
+                    @for (hour of heatmapHours; track hour; let h = $index) {
+                    <div class="cell-heat"
+                        [style.backgroundColor]="'rgba(16, 185, 129, ' + getHeatmapOpacity(d, h) + ')'">
+                    </div>
+                    }
+                    }
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Insights -->
+    <section class="insights-row">
+        @for (ins of insights(); track ins.title) {
+        <div class="insight-card" [ngClass]="ins.type">
+            <div class="insight-icon">{{ ins.icon }}</div>
+
+            <div class="insight-body">
+                <span class="insight-title">{{ ins.title }}</span>
+                <p class="insight-desc">{{ ins.desc }}</p>
+            </div>
+        </div>
+        } @empty {
+        <p class="empty-state">No insights available yet.</p>
+        }
+    </section>
+
+</div>
+
+
+<ngx-spinner bdColor="rgba(15,23,42,0.75)" size="large" color="#2563EB" type="ball-clip-rotate-multiple"
+    [fullScreen]="true">
+    <p style="color:#eff0f3;font-size:16px;font-weight:600;">
+        Please wait...
+    </p>
+</ngx-spinner>

@@ -1,0 +1,91 @@
+<app-header></app-header>
+<section class="hero">
+
+  <div class="hero-left">
+
+    <h1>
+      Take Control of Your
+      <span>Money</span>
+    </h1>
+
+    <p>
+      Track your income, manage your expenses,
+      and understand your spending habits with
+      beautiful reports and interactive charts.
+    </p>
+
+    @if (islogin) {
+    <div class="buttons">
+      <button class="primary" routerLink="dashboard">
+        Get Started
+      </button>
+    </div>
+    }@else {
+    <div class="buttons">
+      <button class="primary" routerLink="/register">
+        Get Started
+      </button>
+
+      <button class="secondary" routerLink="/login">
+        Login
+      </button>
+    </div>
+    }
+
+
+
+  </div>
+
+  <div class=" hero-right">
+    <img src="assets/images/finance.png" alt="Finance">
+  </div>
+
+</section>
+
+<section class="features">
+
+  <div class="card">
+    <div class="icon">💰</div>
+    <h3>Track Income</h3>
+    <p>Add salary, bonuses and other income.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">💸</div>
+    <h3>Manage Expenses</h3>
+    <p>Monitor all your daily spending.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">📊</div>
+    <h3>Monthly Reports</h3>
+    <p>View monthly income and expense summaries.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">📈</div>
+    <h3>Analytics</h3>
+    <p>Understand spending using charts.</p>
+  </div>
+
+</section>
+
+<section class="about">
+
+  <h2>Why Choose Expense Tracker?</h2>
+
+  <div class="about-grid">
+
+    <div>✔ Easy to Use</div>
+
+    <div>✔ Secure Login</div>
+
+    <div>✔ Fast Reports</div>
+
+    <div>✔ Mobile Friendly</div>
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>

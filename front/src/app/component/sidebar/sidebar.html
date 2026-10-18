@@ -1,0 +1,105 @@
+<aside class="sidebar" [class.open]="sidebarOpen">
+
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-wallet"></i>
+        </div>
+
+        <div>
+            <h3>Expense Tracker</h3>
+            <span>Smart Finance</span>
+        </div>
+
+    </div>
+
+
+
+    <nav>
+
+
+        <a routerLink="/dashboard" routerLinkActive="active">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            Dashboard
+
+        </a>
+
+
+
+        <a routerLink="/transaction" routerLinkActive="active">
+
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            Transactions
+
+        </a>
+
+
+
+        <a routerLink="/income" routerLinkActive="active">
+
+            <i class="fa-solid fa-money-bill-trend-up"></i>
+
+            Income
+
+        </a>
+
+
+
+
+        <a routerLink="/expenses" routerLinkActive="active">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            Expenses
+
+        </a>
+
+
+
+
+        <a routerLink="/reports" routerLinkActive="active">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Reports
+
+        </a>
+
+
+
+
+        <!-- <a routerLink="/settings" routerLinkActive="active">
+
+            <i class="fa-solid fa-gear"></i>
+
+            Settings
+
+        </a> -->
+
+        <a routerLink="">
+
+            <i class="fa-solid fa-home"></i>
+
+            Home
+
+        </a>
+
+         <a (click)="logout()">
+
+            <i class="fa-solid fa-lock"></i>
+
+            Logout
+
+        </a>
+
+
+
+
+    </nav>
+
+
+</aside>

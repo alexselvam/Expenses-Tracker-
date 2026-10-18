@@ -1,0 +1,298 @@
+<app-header></app-header>
+
+<div class="dashboard">
+
+
+    <!-- SIDEBAR -->
+
+
+
+    <!-- <app-sidebar [sidebarOpen]="sidebarOpen">
+    </app-sidebar> -->
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+
+        <!-- HEADER -->
+
+        <header>
+
+
+            <div>
+
+                <h2>
+                    {{ greeting }}, {{ profile_data?.username | titlecase }} 
+                </h2>
+                <p>
+                    Here's your financial overview
+                </p>
+
+            </div>
+
+
+
+            <div class="profile">
+
+
+
+
+
+                <img src="assets/images/profile.png">
+
+
+            </div>
+
+
+        </header>
+
+
+
+
+        <!-- CARDS -->
+
+
+        <section class="cards">
+
+
+            <div class="card balance">
+
+                <div>
+                    <span>Total Balance</span>
+
+                    <h2>
+                        ₹ {{ dashboardData?.balance | number:'1.0-0':'en-IN' }}
+                    </h2>
+                </div>
+
+
+                <i class="fa-solid fa-wallet"></i>
+
+
+            </div>
+
+
+
+            <div class="card income">
+
+
+                <div>
+
+                    <span>Total Income</span>
+
+                    <h2>
+                        ₹ {{ dashboardData?.totalIncome | number:'1.0-0':'en-IN' }}
+                    </h2>
+
+                </div>
+
+
+                <i class="fa-solid fa-arrow-trend-up"></i>
+
+
+            </div>
+
+
+
+
+            <div class="card expense">
+
+
+                <div>
+
+                    <span>Total Expense</span>
+
+                    <h2>
+                        ₹ {{ dashboardData?.totalExpense | number:'1.0-0':'en-IN' }}
+                    </h2>
+
+                </div>
+
+
+                <i class="fa-solid fa-arrow-trend-down"></i>
+
+
+            </div>
+
+
+
+
+            <div class="card saving">
+
+
+                <div>
+
+                    <span>Total Savings</span>
+
+                    <h2>
+                        ₹ {{ dashboardData?.totalSavings | number:'1.0-0':'en-IN' }}
+                    </h2>
+
+                </div>
+
+
+                <i class="fa-solid fa-piggy-bank"></i>
+
+
+            </div>
+
+
+        </section>
+
+
+
+
+
+        <!-- CHART AREA -->
+
+
+        <section class="charts">
+
+            <div class="chart-card">
+
+                <h3>
+                    Income vs Expense
+                </h3>
+
+                <div *ngIf="hasIncomeExpenseData(); else noIncomeExpense" echarts [options]="incomeExpenseChart"
+                    class="chart">
+                </div>
+
+                <ng-template #noIncomeExpense>
+
+                    <div class="chart-no-data">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        <h4>No Data Found</h4>
+
+                        <p>
+                            Income and expense data will appear here.
+                        </p>
+
+                    </div>
+
+                </ng-template>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <h3>
+                    Spending Category
+                </h3>
+
+                <div *ngIf="hasCategoryData(); else noCategory" echarts [options]="categoryChart" class="chart">
+                </div>
+
+                <ng-template #noCategory>
+
+                    <div class="chart-no-data">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <h4>No Data Found</h4>
+
+                        <p>
+                            Expense category data will appear here.
+                        </p>
+
+                    </div>
+
+                </ng-template>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- TRANSACTION -->
+
+
+        <section class="transaction-card">
+
+            <h3>
+                Recent Transactions
+            </h3>
+
+
+            <ng-container *ngIf="dashboardData?.recentTransactions?.length; else noTransactions">
+
+                <div class="transaction" *ngFor="let transaction of dashboardData.recentTransactions">
+
+                    <div class="transaction-icon" [class.income-icon]="transaction.type === 'income'"
+                        [class.expense-icon]="transaction.type === 'expense'">
+
+                        <i class="fa-solid" [class.fa-arrow-down]="transaction.type === 'income'"
+                            [class.fa-arrow-up]="transaction.type === 'expense'">
+                        </i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h4>
+                            {{ transaction.category }}
+                        </h4>
+
+                        <p>
+                            {{ transaction.date | date:'dd/MM/yyyy, hh:mm a' }}
+                        </p>
+
+                    </div>
+
+
+                    <strong [class.green]="transaction.type === 'income'" [class.red]="transaction.type === 'expense'">
+
+                        {{ transaction.type === 'income' ? '+' : '-' }}
+
+                        ₹{{ transaction.amount | number:'1.0-0':'en-IN' }}
+
+                    </strong>
+
+                </div>
+
+            </ng-container>
+
+
+            <ng-template #noTransactions>
+
+                <div class="no-data">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                    <h4>
+                        No Data Found
+                    </h4>
+
+                    <p>
+                        Your income and expense history will appear here.
+                    </p>
+
+                </div>
+
+            </ng-template>
+
+        </section>
+
+
+    </main>
+
+
+
+</div>
+
+
+<ngx-spinner bdColor="rgba(15,23,42,0.75)" size="large" color="#2563EB" type="ball-clip-rotate-multiple"
+    [fullScreen]="true">
+    <p style="color:#eff0f3;font-size:16px;font-weight:600;">
+        Please wait...
+    </p>
+</ngx-spinner>

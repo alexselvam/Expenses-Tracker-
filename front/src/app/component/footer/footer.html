@@ -1,0 +1,62 @@
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-logo">
+
+            <h2><i class="fa-solid fa-wallet"></i> Expense Tracker</h2>
+
+            <p>
+                Track your income, manage expenses and stay
+                financially organized with beautiful reports.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a routerLink="/">Home</a>
+            @if (!islogin) {
+            <a routerLink="/login">Login</a>
+
+            <a routerLink="/register">Register</a>
+            }
+
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Features</h3>
+
+            <a routerLink="/income">Income</a>
+
+            <a routerLink="/expenses">Expense</a>
+
+            <a routerLink="/reports">Reports</a>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Contact</h3>
+
+            <p><i class="fa-solid fa-envelope"></i> support@tracker.com</p>
+
+            <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+
+            <p><i class="fa-solid fa-location-dot"></i> Madurai, Tamil Nadu</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 Expense Tracker. All Rights Reserved.
+
+    </div>
+
+</footer>

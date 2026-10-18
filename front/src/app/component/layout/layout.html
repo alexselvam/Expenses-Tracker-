@@ -1,0 +1,23 @@
+<app-header
+(toggleSidebar)="toggleSidebar()">
+</app-header>
+
+<div class="dashboard-layout">
+
+    <app-sidebar
+    [sidebarOpen]="sidebarOpen">
+    </app-sidebar>
+
+    <div
+    class="overlay"
+    *ngIf="sidebarOpen"
+    (click)="closeSidebar()">
+    </div>
+
+    <main class="main">
+
+        <router-outlet></router-outlet>
+
+    </main>
+
+</div>

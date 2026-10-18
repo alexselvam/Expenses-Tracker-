@@ -1,0 +1,325 @@
+<app-header></app-header>
+<div class="dashboard-layout">
+
+    <!-- COMMON SIDEBAR -->
+    <!-- <app-sidebar></app-sidebar> -->
+
+
+    <!-- PAGE CONTENT -->
+    <main class="main">
+
+        <div class="transaction-page">
+
+
+            <!-- HEADER -->
+
+            <div class="page-header">
+
+                <div>
+                    <h2>
+                        Transactions
+                    </h2>
+
+                    <p>
+                        Track all your income and expenses
+                    </p>
+                </div>
+
+
+
+
+            </div>
+
+
+
+            <!-- SUMMARY -->
+
+            <div class="summary">
+
+
+                <div class="summary-card">
+
+                    <div>
+                        <span>
+                            Total Transactions
+                        </span>
+
+                        <h2>
+                            {{ totalTransactions?.totalTransactions | number:'1.0-0':'en-IN' }}
+                        </h2>
+                    </div>
+
+                    <i class="fa-solid fa-list"></i>
+
+                </div>
+
+
+
+                <div class="summary-card income">
+
+                    <div>
+                        <span>
+                            Total Income
+                        </span>
+
+                        <h2>
+                            ₹ {{ totalTransactions?.totalIncome | number:'1.0-0':'en-IN' }}
+                        </h2>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                </div>
+
+
+
+                <div class="summary-card expense">
+
+                    <div>
+                        <span>
+                            Total Expense
+                        </span>
+
+                        <h2>
+                            ₹ {{ totalTransactions?.totalExpense | number:'1.0-0':'en-IN' }}
+                        </h2>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-trend-down"></i>
+
+                </div>
+
+
+
+                <div class="summary-card balance">
+
+                    <div>
+                        <span>
+                            Balance
+                        </span>
+
+                        <h2>
+                            ₹ {{ totalTransactions?.balance | number:'1.0-0':'en-IN' }}
+                        </h2>
+                    </div>
+
+                    <i class="fa-solid fa-wallet"></i>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- FILTER -->
+
+            <!-- FILTER -->
+
+            <div class="filter-box">
+
+                <!-- Search -->
+
+                <div class="search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" placeholder="Search transaction..." [(ngModel)]="searchText"
+                        (input)="applyFilters()">
+
+                </div>
+
+
+                <!-- Type -->
+
+                <select [(ngModel)]="selectedType" (change)="applyFilters()">
+
+                    <option value="All">
+                        All Transactions
+                    </option>
+
+                    <option value="Income">
+                        Income
+                    </option>
+
+                    <option value="Expense">
+                        Expense
+                    </option>
+
+                </select>
+
+
+                <!-- Month -->
+
+                <select [(ngModel)]="selectedMonth" (change)="applyFilters()">
+
+                    <option value="All">
+                        All
+                    </option>
+
+                    <option value="This Month">
+                        This Month
+                    </option>
+
+                    <option value="Last Month">
+                        Last Month
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+
+
+            <!-- TABLE -->
+
+            <div class="table-card">
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+
+                            <th>Category</th>
+
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Payment Type</th>
+
+
+                            <th>Type</th>
+
+
+                            <!-- <th>Action</th> -->
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tbody>
+
+
+                        <tr *ngFor="let transaction of paginatedTransactions">
+
+                            <td>{{transaction.date | date:'dd/MM/yyyy'}}</td>
+
+                            <td>{{transaction.category}}</td>
+
+                            <td>{{transaction.description}}</td>
+                            <td>
+
+                                {{transaction.type=='income' ? '+' : '-'}}
+
+                                ₹{{transaction.amount}}
+
+                            </td>
+
+                            <td>
+
+                                <span class="payment-badge" [class.cash-type]="transaction.paymentType === 'Cash'"
+                                    [class.upi-type]="transaction.paymentType === 'UPI'">
+
+                                    <i class="fa-solid" [class.fa-money-bill]="transaction.paymentType === 'Cash'"
+                                        [class.fa-mobile-screen-button]="transaction.paymentType === 'UPI'">
+                                    </i>
+
+                                    {{ transaction.paymentType }}
+
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <span [class.income-tag]="transaction.type=='income'"
+                                    [class.expense-tag]="transaction.type=='expense'">
+
+                                    {{transaction.type}}
+
+                                </span>
+
+                            </td>
+
+
+
+
+                        </tr>
+
+                        <tr *ngIf="filteredTransactions.length === 0">
+
+                            <td colspan="5" class="no-data">
+
+                                <i class="fa-solid fa-receipt"></i>
+
+                                <h4>No Transactions Found</h4>
+
+                                <p>
+                                    Your income and expense history will appear here.
+                                </p>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+
+                <div class="pagination" *ngIf="totalPages > 1">
+
+                    <button class="page-btn" [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </button>
+
+
+                    <button *ngFor="let page of [].constructor(totalPages); let i = index" class="page-number"
+                        [class.active]="currentPage === i + 1" (click)="changePage(i + 1)">
+
+                        {{ i + 1 }}
+
+                    </button>
+
+
+                    <button class="page-btn" [disabled]="currentPage === totalPages"
+                        (click)="changePage(currentPage + 1)">
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<ngx-spinner bdColor="rgba(15,23,42,0.75)" size="large" color="#2563EB" type="ball-clip-rotate-multiple"
+    [fullScreen]="true">
+    <p style="color:#eff0f3;font-size:16px;font-weight:600;">
+        Please wait...
+    </p>
+</ngx-spinner>

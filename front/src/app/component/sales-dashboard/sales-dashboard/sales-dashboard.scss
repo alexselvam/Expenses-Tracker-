@@ -1,0 +1,597 @@
+:host {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.dashboard-root {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* 1. Header Banner */
+.banner-section {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 100%);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.banner-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.excel-logo-box {
+  background-color: #10b981;
+  font-weight: 900;
+  font-size: 24px;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+.sub-title {
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.main-title {
+  font-size: 32px;
+  margin: 2px 0 0;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.banner-slogan {
+  font-size: 14px;
+  color: #a7f3d0;
+  letter-spacing: 2px;
+  margin: 8px 0 12px;
+}
+
+.banner-badge {
+  display: inline-block;
+  background-color: #065f46;
+  border: 1px solid #34d399;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.banner-upload-bar {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-upload {
+  background-color: #10b981;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #059669;
+  }
+
+  &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.file-status {
+  font-size: 13px;
+  color: #d1fae5;
+}
+
+.badge-busy {
+  background-color: #fbbf24;
+  color: #78350f;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: #f87171;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 2. Menu Navigation Ribbon */
+.nav-ribbon {
+  display: flex;
+  background-color: #064e3b;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.nav-tab {
+  background: transparent;
+  border: none;
+  color: #d1fae5;
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+
+  &.active,
+  &:hover {
+    background-color: #047857;
+    color: #ffffff;
+  }
+}
+
+/* 3. Top KPI Summary Cards */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.kpi-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.kpi-icon-bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+
+  &.green  { background-color: #dcfce7; color: #16a34a; }
+  &.blue   { background-color: #dbeafe; color: #2563eb; }
+  &.purple { background-color: #f3e8ff; color: #9333ea; }
+  &.orange { background-color: #ffedd5; color: #ea580c; }
+  &.teal   { background-color: #ccfbf1; color: #0d9488; }
+}
+
+.kpi-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-heading {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.kpi-number {
+  font-size: 22px;
+  font-weight: 900;
+  margin: 3px 0;
+  color: #0f172a;
+}
+
+.kpi-trend {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.text-green  { color: #16a34a; }
+.text-blue   { color: #2563eb; }
+.text-purple { color: #9333ea; }
+.text-orange { color: #ea580c; }
+.text-teal   { color: #0d9488; }
+.text-red    { color: #ef4444; }
+
+/* 4. Panels & Layout Grids */
+.dashboard-panel {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+}
+
+.panel-badge-green {
+  font-size: 11px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.charts-grid-2 {
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.charts-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* 5. Chart Canvas Containers */
+.canvas-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: block;
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+}
+
+/* Donut Box & Perfect Center Alignment */
+.donut-box {
+  position: relative;
+  width: 100%;
+  height: 240px;
+
+  canvas {
+    position: relative;
+    z-index: 1;
+  }
+
+  .donut-center-text {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    text-align: center;
+    line-height: 1.2;
+
+    .donut-center-val {
+      font-size: 15px;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .donut-center-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      margin-top: 2px;
+    }
+  }
+}
+
+/* Sales by Channel Donut: Right side legend irupathaal circle center ~35% la irukum */
+.charts-grid-2 .donut-box .donut-center-text {
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+/* New vs Returning Donut: Bottom legend irupathaal circle exact center-la irukum */
+.charts-grid-3 .donut-box .donut-center-text {
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 6. Region Breakdown */
+.region-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.world-map-svg-wrap {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.world-svg {
+  width: 100%;
+  max-height: 100px;
+}
+
+.region-table {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.region-row {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.region-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.region-name {
+  flex-grow: 1;
+  font-weight: 600;
+  color: #334155;
+}
+
+.region-sales {
+  font-weight: 700;
+  color: #0f172a;
+  margin-right: 12px;
+}
+
+.region-pct {
+  font-weight: 800;
+  color: #64748b;
+  min-width: 42px;
+  text-align: right;
+}
+
+/* 7. Products Stack */
+.products-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-item-card {
+  display: flex;
+  align-items: center;
+  background-color: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.rank-num {
+  width: 24px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.product-glyph {
+  margin-right: 8px;
+}
+
+.product-title {
+  flex-grow: 1;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.product-revenue {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* 8. Funnel */
+.funnel-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 6px 0;
+}
+
+.funnel-row {
+  display: flex;
+  justify-content: center;
+}
+
+.funnel-polygon {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 14px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* 9. Heatmap */
+.heatmap-wrapper {
+  overflow-x: auto;
+}
+
+.heatmap-matrix {
+  display: grid;
+  grid-template-columns: 50px repeat(6, 1fr);
+  gap: 4px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.cell-day-header,
+.cell-hour-header {
+  font-weight: 700;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell-heat {
+  height: 28px;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+/* 10. Bottom Insights Row */
+.insights-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.insight-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  color: #ffffff;
+
+  &.green  { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+  &.blue   { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); }
+  &.purple { background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); }
+  &.orange { background: linear-gradient(135deg, #f97316 0%, #c2410c 100%); }
+  &.teal   { background: linear-gradient(135deg, #14b8a6 0%, #0f766e 100%); }
+}
+
+.insight-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.insight-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.insight-title {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.insight-desc {
+  margin: 3px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.empty-state {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 16px 0;
+}
+
+/* 11. Responsive Media Queries */
+@media (max-width: 1024px) {
+  .charts-grid-2,
+  .charts-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :host {
+    padding: 8px;
+  }
+
+  .banner-section {
+    padding: 16px 12px;
+  }
+
+  .main-title {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .sub-title {
+    font-size: 14px;
+  }
+
+  .banner-upload-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-upload {
+    width: 100%;
+    text-align: center;
+  }
+
+  .kpi-row {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-grid-2 .donut-box .donut-center-text {
+    left: 32%;
+  }
+
+  .charts-grid-3 .donut-box .donut-center-text {
+    left: 50%;
+    top: 40%;
+  }
+
+  .heatmap-matrix {
+    min-width: 320px;
+  }
+
+  .cell-heat {
+    height: 22px;
+  }
+}

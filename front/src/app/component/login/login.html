@@ -1,0 +1,230 @@
+<app-header></app-header>
+<div class="login-page">
+
+    <!-- ================= LEFT SECTION ================= -->
+
+    <div class="left-panel">
+        <!-- Background Effects -->
+
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <div>
+                <h3>Expense Tracker</h3>
+                <span>Smart Money Management</span>
+            </div>
+
+        </div>
+
+        <!-- Heading -->
+
+        <div class="hero-content">
+
+            <h1>
+
+                Welcome
+                <span>Back!</span>
+
+            </h1>
+
+            <p>
+
+                Login securely to continue tracking your income,
+                expenses and financial goals.
+
+            </p>
+
+        </div>
+
+        <!-- Features -->
+
+        <div class="feature-list">
+
+            <div class="feature-card">
+
+                <div class="icon green">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <div>
+                    <h4>Secure Login</h4>
+                    <p>Your data is encrypted and protected.</p>
+                </div>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon purple">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div>
+                    <h4>Smart Dashboard</h4>
+                    <p>View reports and financial insights.</p>
+                </div>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon orange">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+                <div>
+                    <h4>Expense Analytics</h4>
+                    <p>Monitor your spending habits easily.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Dashboard Image -->
+
+        <div class="dashboard-wrapper">
+
+
+        </div>
+
+    </div>
+
+    <!-- ================= RIGHT SECTION ================= -->
+
+    <div class="right-section">
+
+        <form class="login-card" [formGroup]="loginForm" (ngSubmit)="login()">
+
+            <div class="login-header">
+
+                <h2>
+
+                    Welcome Back !!!
+
+                </h2>
+
+                <p>
+
+                    Login to continue managing your finances.
+
+                </p>
+
+            </div>
+
+            <!-- Email -->
+
+            <div class="input-group">
+
+                <label>Email Address</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input type="email" formControlName="email" placeholder="Enter your email">
+
+                </div>
+
+                <small class="error" *ngIf="submitted && f['email'].errors">
+
+                    Enter a valid email.
+
+                </small>
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input [type]="hidePassword ? 'password' : 'text'" formControlName="password"
+                        placeholder="Enter your password">
+
+                    <i class="fa-solid password" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash'"
+                        (click)="hidePassword=!hidePassword">
+
+                    </i>
+
+                </div>
+
+                <small class="error" *ngIf="submitted && f['password'].errors">
+
+                    Password is required.
+
+                </small>
+
+            </div>
+
+            <!-- Remember -->
+
+            <div class="remember-row">
+
+              
+
+                <a routerLink="/forgetpass">
+
+                    Forgot Password?
+
+                </a>
+
+            </div>
+
+            <!-- Button -->
+
+            <button class="login-btn" type="submit">
+
+                {{loading ? 'Signing In...' : 'Login'}}
+
+            </button>
+
+
+            <!-- Bottom -->
+
+            <div class="bottom-text">
+
+                Don't have an account?
+
+                <a routerLink="/register">
+
+                    Register
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<ngx-spinner bdColor="rgba(15,23,42,0.75)" size="large" color="#2563EB" type="ball-clip-rotate-multiple"
+    [fullScreen]="true">
+    <p style="color:#eff0f3;font-size:16px;font-weight:600;">
+        Please wait...
+    </p>
+</ngx-spinner>

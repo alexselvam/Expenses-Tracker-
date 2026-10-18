@@ -1,0 +1,282 @@
+.about-page {
+    background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+    overflow: hidden;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: 1300px;
+    margin: auto;
+    padding: 90px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #64748b;
+    line-height: 1.9;
+    max-width: 550px;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 520px;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+/* ================= MISSION ================= */
+
+.mission {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 40px 90px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,.6);
+    border-radius: 24px;
+    padding: 40px;
+    text-align: center;
+    transition: .35s;
+    box-shadow: 0 15px 40px rgba(15,23,42,.08);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(37,99,235,.18);
+}
+
+.card i {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto 20px;
+    font-size: 34px;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+/* ================= WHY ================= */
+
+.why-us {
+    max-width: 1300px;
+    margin: auto;
+    padding: 30px 40px 90px;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: #0f172a;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.feature {
+    background: white;
+    border-radius: 22px;
+    padding: 35px 25px;
+    transition: .35s;
+    box-shadow: 0 12px 30px rgba(15,23,42,.06);
+}
+
+.feature:hover {
+    transform: translateY(-12px);
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+    color: white;
+}
+
+.feature:hover p,
+.feature:hover h4,
+.feature:hover i{
+    color:white;
+}
+
+.feature i {
+    font-size: 42px;
+    color: #2563eb;
+    margin-bottom: 18px;
+    transition: .3s;
+}
+
+.feature h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.feature p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* ================= STATS ================= */
+
+.stats {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px 90px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+.stat-card {
+    border-radius: 24px;
+    padding: 35px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+    transition: .35s;
+    box-shadow: 0 15px 35px rgba(37,99,235,.25);
+}
+
+.stat-card:hover {
+    transform: scale(1.05);
+}
+
+.stat-card h2 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.stat-card span {
+    opacity: .9;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    padding: 70px;
+    text-align: center;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(135deg,#2563eb,#4f46e5);
+    box-shadow: 0 25px 50px rgba(37,99,235,.25);
+}
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.cta p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.8;
+    opacity: .9;
+}
+
+.cta button {
+    margin-top: 35px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 14px;
+    background: white;
+    color: #2563eb;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cta button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255,255,255,.35);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.hero{
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-content p{
+    margin:auto;
+}
+
+.mission,
+.features,
+.stats{
+    grid-template-columns:1fr;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.why-us h2,
+.cta h2{
+    font-size:34px;
+}
+
+.cta{
+    margin:40px 20px;
+    padding:50px 30px;
+}
+
+}

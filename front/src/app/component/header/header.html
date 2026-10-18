@@ -1,0 +1,65 @@
+<header class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-wallet"></i>
+        <span routerLink="/">Expense Tracker</span>
+    </div>
+
+    <!-- Mobile Menu Icon -->
+    <button class="menu-btn" (click)="menuOpen = !menuOpen">
+        <i class="fa-solid" [ngClass]="menuOpen ? 'fa-xmark' : 'fa-bars'"></i>
+    </button>
+    <!-- <button class="menu-btn" (click)="toggleSidebar.emit()">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button> -->
+
+    <nav [class.active]="menuOpen">
+
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            Home
+        </a>
+
+        @if(!islogin){
+        <a routerLink="/features" routerLinkActive="active">
+            Features
+        </a>
+
+        <a routerLink="/about" routerLinkActive="active">
+            About
+        </a>
+        <button class="login-btn" routerLink="/login">
+            Login
+        </button>
+
+        <button class="register-btn" routerLink="/register">
+            Register
+        </button>
+        }@else {
+        <a routerLink="/dashboard" routerLinkActive="active">
+            Dashboard
+        </a>
+        <a routerLink="/sales_report" routerLinkActive="active">
+            Sales Report
+        </a>
+
+        <a routerLink="/transaction" routerLinkActive="active">
+            Transactions
+        </a>
+        <a routerLink="/income" routerLinkActive="active">
+            Income
+        </a>
+        <a routerLink="/expenses" routerLinkActive="active">
+            Expenses
+        </a>
+        <a routerLink="/reports" routerLinkActive="active">
+            Reports
+        </a>
+        <button class="login-btn" (click)="logout()">
+            Logout
+        </button>
+        }
+    </nav>
+
+</header>

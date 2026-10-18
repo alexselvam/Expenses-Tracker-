@@ -1,0 +1,184 @@
+<app-header></app-header>
+<div class="register-page">
+
+    <!-- Left Side -->
+
+    <div class="left-section">
+
+        <div class="overlay"></div>
+
+        <div class="left-content">
+
+            <img src="assets/images/finance.png" alt="Finance">
+
+            <h1>Start Your Financial Journey</h1>
+
+            <p>
+                Manage your income, track expenses and
+                analyze your spending with beautiful reports.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+                    <span>💰</span>
+                    <p>Track Income</p>
+                </div>
+
+                <div class="feature">
+                    <span>💸</span>
+                    <p>Manage Expenses</p>
+                </div>
+
+                <div class="feature">
+                    <span>📊</span>
+                    <p>Monthly Reports</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Right Side -->
+
+    <div class="right-section">
+
+        <form class="register-card" [formGroup]="registerForm" (ngSubmit)="register()">
+
+            <h2>Create Account</h2>
+
+            <p class="subtitle">
+
+                Create your account to start managing your finances.
+
+            </p>
+
+
+
+
+            <!-- Email -->
+
+            <div class="input-group">
+
+                <label>Email Address</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input type="email" formControlName="email" placeholder="Enter your email">
+
+                </div>
+                <small class="error" *ngIf="submitted && f['email'].errors">
+
+                    Enter valid email
+
+                </small>
+
+            </div>
+
+
+
+            <!-- Password -->
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input [type]="hidePassword ? 'password' : 'text'" formControlName="password"
+                        placeholder="Enter Password">
+
+                    <i class="fa-solid" [ngClass]="hidePassword ? 'fa-eye' : 'fa-eye-slash'"
+                        (click)="hidePassword=!hidePassword">
+                    </i>
+
+                </div>
+                <small class="error" *ngIf="submitted && f['password'].errors">
+
+                    Minimum 6 characters
+
+                </small>
+
+            </div>
+
+
+
+            <!-- Confirm Password -->
+
+            <div class="input-group">
+
+                <label>Confirm Password</label>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input [type]="hideConfirmPassword ? 'password':'text'" formControlName="confirmPassword"
+                        placeholder="Confirm Password">
+
+                    <i class="fa-solid" [ngClass]="hideConfirmPassword ? 'fa-eye':'fa-eye-slash'"
+                        (click)="hideConfirmPassword=!hideConfirmPassword">
+                    </i>
+
+                </div>
+
+                <small class="error" *ngIf="submitted && registerForm.errors?.['passwordMismatch']">
+
+                    Passwords do not match
+
+                </small>
+            </div>
+
+
+
+            <!-- Button -->
+
+            <button class="register-btn" type="submit">
+
+                {{loading ? 'Creating Account...' : 'Create Account'}}
+
+            </button>
+
+
+
+
+            <!-- Bottom -->
+
+            <div class="bottom-text">
+
+                Already have an account?
+
+                <a routerLink="/login">
+
+                    Login
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<ngx-spinner
+  bdColor="rgba(15,23,42,0.75)"
+  size="large"
+  color="#2563EB"
+  type="ball-clip-rotate-multiple"
+  [fullScreen]="true">
+ <p style="color:#eff0f3;font-size:16px;font-weight:600;">
+    Please wait...
+  </p>
+</ngx-spinner>
+

@@ -1,0 +1,1679 @@
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-page {
+
+    display: flex;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at top left, #2563eb22, transparent 30%),
+        radial-gradient(circle at bottom right, #4f46e522, transparent 30%),
+        linear-gradient(135deg, #eef5ff, #ffffff);
+
+}
+
+
+/* ===================================
+        LEFT PANEL
+=================================== */
+
+.left-panel {
+
+    position: relative;
+
+    width: 50%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(135deg, #2563eb, #4f46e5);
+
+    padding: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+/* Large Blur */
+
+.left-panel::before {
+
+    content: '';
+
+    position: absolute;
+
+    width: 550px;
+
+    height: 550px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .08);
+
+    top: -220px;
+
+    right: -180px;
+
+}
+
+
+/* Bottom Blur */
+
+.left-panel::after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .05);
+
+    bottom: -160px;
+
+    left: -120px;
+
+}
+
+
+/* ===================================
+        FLOATING CIRCLES
+=================================== */
+
+.circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .07);
+
+    animation: floatCircle 12s infinite ease-in-out;
+
+}
+
+.circle.one {
+
+    width: 250px;
+
+    height: 250px;
+
+    top: 80px;
+
+    right: -70px;
+
+}
+
+.circle.two {
+
+    width: 170px;
+
+    height: 170px;
+
+    bottom: 120px;
+
+    left: -60px;
+
+    animation-delay: 2s;
+
+}
+
+.circle.three {
+
+    width: 110px;
+
+    height: 110px;
+
+    right: 220px;
+
+    bottom: 260px;
+
+    animation-delay: 5s;
+
+}
+
+
+/* ===================================
+        LOGO
+=================================== */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 50px;
+
+    z-index: 2;
+
+}
+
+.logo-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    background: #fff;
+
+    color: #2563eb;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 24px;
+
+    box-shadow: 0 20px 35px rgba(0, 0, 0, .18);
+
+}
+
+.logo h3 {
+
+    color: #fff;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+.logo span {
+
+    color: rgba(255, 255, 255, .75);
+
+    font-size: 15px;
+
+}
+
+
+/* ===================================
+        HERO CONTENT
+=================================== */
+
+.hero-content {
+
+    max-width: 470px;
+
+    z-index: 2;
+
+}
+
+.hero-content h1 {
+
+    color: #fff;
+
+    font-size: 60px;
+
+    line-height: 70px;
+
+    font-weight: 700;
+
+}
+
+.hero-content span {
+
+    color: #7CF2C3;
+
+}
+
+.hero-content p {
+
+    margin-top: 20px;
+
+    color: rgba(255, 255, 255, .9);
+
+    font-size: 18px;
+
+    line-height: 30px;
+
+}
+
+
+/* ===================================
+        RIGHT
+=================================== */
+
+.right-section {
+
+    width: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px;
+
+}
+
+
+/* ===================================
+      LOGIN CARD
+=================================== */
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 45px;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, .75);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .4);
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, .08);
+
+    animation: fadeUp .8s ease;
+
+}
+
+
+/* ===================================
+        HEADER
+=================================== */
+
+.login-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.login-header h2 {
+
+    font-size: 36px;
+
+    color: #1e293b;
+
+    margin-bottom: 10px;
+
+}
+
+.login-header p {
+
+    color: #64748b;
+
+    line-height: 26px;
+
+}
+
+
+/* ===================================
+      ANIMATIONS
+=================================== */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes floatCircle {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-25px);
+
+    }
+
+}
+
+/* ===================================
+        INPUT GROUP
+=================================== */
+
+.input-group {
+
+    margin-bottom: 22px;
+
+}
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+
+/* ===================================
+        INPUT BOX
+=================================== */
+
+.input-box {
+
+    display: flex;
+
+    align-items: center;
+
+    height: 58px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 16px;
+
+    padding: 0 18px;
+
+    transition: .35s;
+
+}
+
+.input-box:hover {
+
+    border-color: #2563eb;
+
+}
+
+.input-box:focus-within {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .12);
+
+}
+
+.input-box i {
+
+    color: #94a3b8;
+
+    font-size: 17px;
+
+}
+
+.input-box input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 0 12px;
+
+    font-size: 15px;
+
+    color: #1e293b;
+
+}
+
+.input-box input::placeholder {
+
+    color: #94a3b8;
+
+}
+
+
+/* ===================================
+      PASSWORD ICON
+=================================== */
+
+.password {
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.password:hover {
+
+    color: #2563eb;
+
+    transform: scale(1.1);
+
+}
+
+
+/* ===================================
+      REMEMBER ROW
+=================================== */
+
+.remember-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 10px 0 28px;
+
+    font-size: 14px;
+
+}
+
+.remember-row label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #475569;
+
+    cursor: pointer;
+
+}
+
+.remember-row input {
+
+    width: 16px;
+
+    height: 16px;
+
+    accent-color: #2563eb;
+
+}
+
+.remember-row a {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+.remember-row a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ===================================
+        LOGIN BUTTON
+=================================== */
+
+.login-btn {
+
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #fff;
+
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+
+    transition: .35s;
+
+}
+
+.login-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 18px 35px rgba(37, 99, 235, .35);
+
+}
+
+.login-btn:active {
+
+    transform: scale(.98);
+
+}
+
+
+/* ===================================
+          DIVIDER
+=================================== */
+
+.divider {
+
+    position: relative;
+
+    text-align: center;
+
+    margin: 35px 0;
+
+}
+
+.divider::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    width: 100%;
+
+    height: 1px;
+
+    background: #e2e8f0;
+
+}
+
+.divider span {
+
+    position: relative;
+
+    background: #fff;
+
+    padding: 0 18px;
+
+    color: #94a3b8;
+
+}
+
+
+/* ===================================
+      SOCIAL BUTTONS
+=================================== */
+
+.social-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.social-buttons button {
+
+    flex: 1;
+
+    height: 55px;
+
+    border-radius: 15px;
+
+    border: 1px solid #dbeafe;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #334155;
+
+    transition: .35s;
+
+}
+
+.social-buttons button i {
+
+    margin-right: 10px;
+
+    font-size: 18px;
+
+}
+
+.social-buttons button:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #2563eb;
+
+    box-shadow: 0 12px 30px rgba(37, 99, 235, .12);
+
+}
+
+
+/* ===================================
+        BOTTOM TEXT
+=================================== */
+
+.bottom-text {
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+}
+
+.bottom-text a {
+
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+.bottom-text a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ===================================
+          ERROR
+=================================== */
+
+.error {
+
+    display: block;
+
+    margin-top: 8px;
+
+    color: #ef4444;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* ===================================
+      DASHBOARD WRAPPER
+=================================== */
+
+.dashboard-wrapper {
+
+    position: absolute;
+
+    right: 40px;
+
+    bottom: 50px;
+
+    width: 480px;
+
+    z-index: 2;
+
+}
+
+
+/* ===================================
+      DASHBOARD IMAGE
+=================================== */
+
+.dashboard-image {
+
+    position: relative;
+
+    animation: floatDashboard 5s ease-in-out infinite;
+
+}
+
+.dashboard-image img {
+
+    width: 100%;
+
+    display: block;
+
+    filter: drop-shadow(0 30px 45px rgba(0, 0, 0, .25));
+
+    transition: .4s;
+
+}
+
+.dashboard-image:hover img {
+
+    transform: scale(1.03);
+
+}
+
+
+/* ===================================
+      FLOATING CARDS
+=================================== */
+
+.floating-card {
+
+    position: absolute;
+
+    background: rgba(255, 255, 255, .95);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 22px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+
+    transition: .35s;
+
+}
+
+.floating-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+/* ===================================
+      SAVINGS CARD
+=================================== */
+
+.savings {
+
+    width: 220px;
+
+    top: -30px;
+
+    left: -40px;
+
+    padding: 18px;
+
+}
+
+.small-title {
+
+    font-size: 13px;
+
+    color: #64748b;
+
+    margin-bottom: 8px;
+
+}
+
+.savings h2 {
+
+    font-size: 30px;
+
+    color: #0f172a;
+
+    margin-bottom: 10px;
+
+}
+
+.trend {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #16a34a;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+}
+
+
+/* ===================================
+      ANALYTICS CARD
+=================================== */
+
+.analytics {
+
+    width: 190px;
+
+    right: -20px;
+
+    bottom: 40px;
+
+    padding: 18px;
+
+}
+
+.analytics h4 {
+
+    color: #334155;
+
+    margin-bottom: 12px;
+
+    font-size: 15px;
+
+}
+
+.analytics-bars {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    height: 80px;
+
+}
+
+.analytics-bars span {
+
+    width: 20px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(180deg, #3b82f6, #2563eb);
+
+}
+
+.analytics-bars span:nth-child(1) {
+
+    height: 35px;
+
+}
+
+.analytics-bars span:nth-child(2) {
+
+    height: 55px;
+
+}
+
+.analytics-bars span:nth-child(3) {
+
+    height: 75px;
+
+}
+
+.analytics-bars span:nth-child(4) {
+
+    height: 48px;
+
+}
+
+
+/* ===================================
+      PIE CARD
+=================================== */
+
+.pie-card {
+
+    width: 100px;
+
+    height: 100px;
+
+    right: 30px;
+
+    top: -30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.pie-chart {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: conic-gradient(#2563eb 0% 35%,
+
+            #22c55e 35% 65%,
+
+            #f59e0b 65% 85%,
+
+            #ef4444 85% 100%);
+
+    position: relative;
+
+    animation: rotatePie 10s linear infinite;
+
+}
+
+.pie-chart::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 24px;
+
+    height: 24px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+
+
+/* ===================================
+      TRUST CARD
+=================================== */
+
+.trust-card {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, .15);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    border-radius: 22px;
+
+    padding: 18px 20px;
+
+    transition: .35s;
+
+}
+
+.trust-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.avatars {
+
+    display: flex;
+
+}
+
+.avatar {
+
+    width: 46px;
+
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: 700;
+
+    margin-right: -10px;
+
+    border: 3px solid #2563eb;
+
+}
+
+.trust-card h4 {
+
+    color: #fff;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+
+}
+
+.stars {
+
+    color: #FFD54A;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* ===================================
+      FLOAT ANIMATION
+=================================== */
+
+@keyframes floatDashboard {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-15px);
+
+    }
+
+}
+
+
+/* ===================================
+      PIE ROTATION
+=================================== */
+
+@keyframes rotatePie {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* ===================================
+        RESPONSIVE DESIGN
+=================================== */
+
+@media screen and (max-width:1400px) {
+
+    .hero-content h1 {
+
+        font-size: 52px;
+
+        line-height: 60px;
+
+    }
+
+    .dashboard-wrapper {
+
+        width: 420px;
+
+        right: 20px;
+
+    }
+
+}
+
+
+@media screen and (max-width:1200px) {
+
+    .login-page {
+
+        flex-direction: column;
+
+    }
+
+    .left-panel {
+
+        width: 100%;
+
+        min-height: 650px;
+
+        padding: 50px;
+
+    }
+
+    .right-section {
+
+        width: 100%;
+
+        padding: 50px 20px;
+
+    }
+
+    .dashboard-wrapper {
+
+        position: relative;
+
+        width: 450px;
+
+        margin: 50px auto 0;
+
+        right: 0;
+
+        bottom: 0;
+
+    }
+
+}
+
+
+@media screen and (max-width:992px) {
+
+    .logo {
+
+        justify-content: center;
+
+    }
+
+    .hero-content {
+
+        text-align: center;
+
+        max-width: 100%;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 45px;
+
+        line-height: 55px;
+
+    }
+
+    .feature-list {
+
+        margin-top: 35px;
+
+    }
+
+    .dashboard-wrapper {
+
+        width: 380px;
+
+    }
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    .left-panel {
+
+        padding: 35px 25px;
+
+    }
+
+    .login-card {
+
+        padding: 35px 25px;
+
+    }
+
+    .dashboard-wrapper {
+
+        width: 320px;
+
+    }
+
+    .floating-card {
+
+        transform: scale(.9);
+
+    }
+
+    .savings {
+
+        left: -20px;
+
+    }
+
+    .analytics {
+
+        right: -10px;
+
+    }
+
+}
+
+
+@media screen and (max-width:576px) {
+
+    .hero-content h1 {
+
+        font-size: 36px;
+
+        line-height: 45px;
+
+    }
+
+    .hero-content p {
+
+        font-size: 16px;
+
+    }
+
+    .logo h3 {
+
+        font-size: 24px;
+
+    }
+
+    .feature-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .social-buttons {
+
+        flex-direction: column;
+
+    }
+
+    .remember-row {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+        align-items: flex-start;
+
+    }
+
+    .dashboard-wrapper {
+
+        width: 260px;
+
+    }
+
+    .pie-card {
+
+        width: 80px;
+
+        height: 80px;
+
+    }
+
+    .pie-chart {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+    .trust-card {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+
+    }
+
+}
+
+
+
+/* ===================================
+            HOVER EFFECTS
+=================================== */
+
+.logo-icon {
+
+    transition: .35s;
+
+}
+
+.logo:hover .logo-icon {
+
+    transform: rotate(-10deg) scale(1.08);
+
+}
+
+
+
+.feature-card {
+
+    transition: .35s;
+
+    border-radius: 18px;
+
+    padding: 15px;
+
+}
+
+.feature-card:hover {
+
+    transform: translateX(12px);
+
+    background: rgba(255, 255, 255, .08);
+
+}
+
+
+
+.login-card {
+
+    transition: .4s;
+
+}
+
+.login-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 35px 70px rgba(15, 23, 42, .12);
+
+}
+
+
+
+.avatar {
+
+    transition: .35s;
+
+}
+
+.avatar:hover {
+
+    transform: translateY(-8px) scale(1.08);
+
+}
+
+
+
+/* ===================================
+      DASHBOARD IMAGE EFFECT
+=================================== */
+
+.dashboard-image {
+
+    transition: .4s;
+
+}
+
+.dashboard-wrapper:hover .dashboard-image {
+
+    transform: rotate(-2deg) scale(1.02);
+
+}
+
+
+
+/* ===================================
+      FLOATING DOTS
+=================================== */
+
+.dot {
+
+    position: absolute;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .25);
+
+    animation: floatingDots 8s linear infinite;
+
+}
+
+.dot:nth-child(1) {
+
+    top: 8%;
+
+    left: 15%;
+
+}
+
+.dot:nth-child(2) {
+
+    top: 25%;
+
+    right: 12%;
+
+}
+
+.dot:nth-child(3) {
+
+    bottom: 20%;
+
+    left: 25%;
+
+}
+
+.dot:nth-child(4) {
+
+    bottom: 8%;
+
+    right: 18%;
+
+}
+
+
+
+@keyframes floatingDots {
+
+    0% {
+
+        transform: translateY(0);
+
+        opacity: .2;
+
+    }
+
+    50% {
+
+        transform: translateY(-25px);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+        opacity: .2;
+
+    }
+
+}
+
+
+
+/* ===================================
+      CUSTOM SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #eef5ff;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #2563eb;
+
+    border-radius: 20px;
+
+}
+
+
+
+/* ===================================
+      GLASS BORDER
+=================================== */
+
+.login-card::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 28px;
+
+    padding: 1px;
+
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, .5),
+            rgba(255, 255, 255, .05));
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+
+    pointer-events: none;
+
+}
+
+
+
+/* ===================================
+      BUTTON RIPPLE EFFECT
+=================================== */
+
+.login-btn {
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+.login-btn::after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 0;
+
+    height: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .3);
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: .6s;
+
+}
+
+.login-btn:hover::after {
+
+    width: 320px;
+
+    height: 320px;
+
+}
+
+
+
+/* ===================================
+      SMOOTH TRANSITION
+=================================== */
+
+* {
+
+    transition:
+        background .3s,
+        color .3s,
+        border .3s,
+        transform .3s;
+
+}
+
+
+.fa-solid {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+.fa-regular {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 400 !important;
+}

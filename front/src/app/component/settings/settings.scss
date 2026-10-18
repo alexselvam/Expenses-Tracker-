@@ -1,0 +1,121 @@
+.dashboard-layout{
+
+    display:flex;
+    min-height:100vh;
+    background:#f8fafc;
+
+}
+
+.main{
+
+    flex:1;
+    padding:35px;
+
+}
+
+.page-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+
+}
+
+.page-header h2{
+
+    margin:0;
+    font-size:30px;
+
+}
+
+.page-header p{
+
+    color:#64748b;
+
+}
+
+.save-btn{
+
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:14px 22px;
+    border-radius:12px;
+    cursor:pointer;
+
+}
+
+.card{
+
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+}
+
+.card h3{
+
+    margin-bottom:20px;
+
+}
+
+.form-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+}
+
+.form-group{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.form-group label{
+
+    margin-bottom:8px;
+    font-weight:600;
+
+}
+
+.form-group input,
+.form-group select{
+
+    padding:12px;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    outline:none;
+
+}
+
+.switch-row{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+    border-bottom:1px solid #f1f5f9;
+
+}
+
+.switch-row:last-child{
+
+    border-bottom:none;
+
+}
+
+@media(max-width:768px){
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

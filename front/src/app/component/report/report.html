@@ -1,0 +1,375 @@
+<app-header></app-header>
+<div class="dashboard-layout">
+
+
+    <!-- <app-sidebar></app-sidebar> -->
+
+
+
+    <main class="main">
+
+
+        <div class="report-page">
+
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <h2>
+                        Financial Reports
+                    </h2>
+
+                    <p>
+                        Analyze your income and spending patterns
+                    </p>
+
+                </div>
+
+                <!-- 
+                <button type="button" class="export-btn" (click)="exportReport()">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Export Report
+
+                </button> -->
+
+                <!-- <button type="button" class="export-btn" (click)="exportReport()">
+                    <i class="fa-solid fa-download"></i>
+                    Export Report
+                </button> -->
+            </div>
+
+
+
+            <div class="summary">
+
+
+                <!-- TOTAL INCOME -->
+
+                <div class="summary-card">
+
+                    <div>
+
+                        <span>
+                            Total Income
+                        </span>
+
+                        <h2>
+                            ₹ {{ totalIncome | number:'1.0-0':'en-IN' }}
+                        </h2>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                </div>
+
+
+                <!-- TOTAL EXPENSE -->
+
+                <div class="summary-card expense">
+
+                    <div>
+
+                        <span>
+                            Total Expense
+                        </span>
+
+                        <h2>
+                            ₹ {{ totalExpense | number:'1.0-0':'en-IN' }}
+                        </h2>
+
+                    </div>
+
+                    <i class="fa-solid fa-arrow-trend-down"></i>
+
+                </div>
+
+
+                <!-- TOTAL SAVINGS -->
+
+                <div class="summary-card">
+
+                    <div>
+
+                        <span>
+                            Total Savings
+                        </span>
+
+                        <h2>
+                            ₹ {{ savings | number:'1.0-0':'en-IN' }}
+                        </h2>
+
+                    </div>
+
+                    <i class="fa-solid fa-piggy-bank"></i>
+
+                </div>
+
+
+                <!-- SAVINGS RATE -->
+
+                <div class="summary-card">
+
+                    <div>
+
+                        <span>
+                            Savings Rate
+                        </span>
+
+                        <h2>
+                            {{ savingsRate }}%
+                        </h2>
+
+                    </div>
+
+                    <i class="fa-solid fa-percent"></i>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="filter-box">
+
+
+
+                <!-- <select [(ngModel)]="selectedPeriod" (change)="getReport()">
+
+                    <option value="This Year">
+                        This Year
+                    </option>
+
+                    <option value="This Month">
+                        This Month
+                    </option>
+
+                    <option value="Last Month">
+                        Last Month
+                    </option>
+
+                </select>
+
+
+
+                <select [(ngModel)]="selectedCategory" (change)="getReport()">
+
+                    <option *ngFor="let category of categories" [value]="category">
+
+                        {{ category }}
+
+                    </option>
+
+                </select> -->
+
+
+            </div>
+
+
+            <div class="charts">
+
+                <!-- INCOME VS EXPENSE -->
+
+                <div class="chart-card">
+
+                    <h3>
+                        Income vs Expense
+                    </h3>
+
+                    <!-- CHART -->
+
+                    <div class="chart-wrapper" *ngIf="hasIncomeExpenseData()">
+
+                        <div echarts [options]="incomeExpenseChartOption" class="chart">
+                        </div>
+
+                    </div>
+
+
+                    <!-- NO DATA -->
+
+                    <div class="chart-no-data" *ngIf="!hasIncomeExpenseData()">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        <h4>
+                            No Data Found
+                        </h4>
+
+                        <p>
+                            No income or expense data available for this period.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXPENSE CATEGORY -->
+
+                <div class="chart-card">
+
+                    <h3>
+                        Expense Category
+                    </h3>
+
+
+                    <!-- CHART -->
+
+                    <div class="chart-wrapper" *ngIf="hasExpenseCategoryData()">
+
+                        <div echarts [options]="expenseChartOption" class="chart">
+                        </div>
+
+                    </div>
+
+
+                    <!-- NO DATA -->
+
+                    <div class="chart-no-data" *ngIf="!hasExpenseCategoryData()">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                        <h4>
+                            No Data Found
+                        </h4>
+
+                        <p>
+                            No expense category data available.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="table-card">
+
+
+                <h3>
+                    Monthly Summary
+                </h3>
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Month
+                            </th>
+
+                            <th>
+                                Income
+                            </th>
+
+                            <th>
+                                Expense
+                            </th>
+
+                            <th>
+                                Savings
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- DATA -->
+
+                        <tr *ngFor="let report of monthlyReports">
+
+                            <td>
+                                {{ report.month }}
+                            </td>
+
+
+                            <td class="green">
+
+                                ₹
+                                {{ report.income | number:'1.0-0':'en-IN' }}
+
+                            </td>
+
+
+                            <td class="red">
+
+                                ₹
+                                {{ report.expense | number:'1.0-0':'en-IN' }}
+
+                            </td>
+
+
+                            <td>
+
+                                ₹
+                                {{ report.savings | number:'1.0-0':'en-IN' }}
+
+                            </td>
+
+                        </tr>
+
+
+                        <!-- NO DATA -->
+
+                        <tr *ngIf="monthlyReports.length === 0">
+
+                            <td colspan="4" class="no-data">
+
+                                <i class="fa-solid fa-chart-column"></i>
+
+                                <h4>
+                                    No Report Data Found
+                                </h4>
+
+                                <p>
+                                    Your financial report will appear here.
+                                </p>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </main>
+
+
+
+</div>
+
+
+<ngx-spinner bdColor="rgba(15,23,42,0.75)" size="large" color="#2563EB" type="ball-clip-rotate-multiple"
+    [fullScreen]="true">
+    <p style="color:#eff0f3;font-size:16px;font-weight:600;">
+        Please wait...
+    </p>
+</ngx-spinner>

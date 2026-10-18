@@ -1,0 +1,245 @@
+<app-header></app-header>
+<div class="dashboard-layout">
+    <!-- <app-sidebar></app-sidebar> -->
+    <main class="main">
+        <div class="expense-page">
+            <!-- HEADER -->
+            <div class="page-header">
+                <div>
+                    <h2>
+                        Expenses
+                    </h2>
+                    <p>
+                        Track and manage your spending
+                    </p>
+                </div>
+                <button class="add-btn" (click)="openModal()" style="cursor: pointer;">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Expense
+                </button>
+            </div>
+            <!-- SUMMARY -->
+            <div class="summary">
+                <div class="summary-card">
+                    <div>
+                        <span>
+                            Total Expense
+                        </span>
+                        <h2>
+                            ₹ {{Expense_dashboard?.totalExpense | number:'1.0-0':'en-IN'}}
+                        </h2>
+                    </div>
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+
+                <div class="summary-card green-card">
+                    <div>
+                        <span>
+                            This Month
+                        </span>
+                        <h2>
+                            ₹ {{Expense_dashboard?.thisMonthExpense| number:'1.0-0':'en-IN'}}
+                        </h2>
+                    </div>
+                    <i class="fa-solid fa-calendar"></i>
+                </div>
+
+                <div class="summary-card">
+                    <div>
+                        <span>
+                            Categories
+                        </span>
+                        <h2>
+                            {{Expense_dashboard?.categories| number:'1.0-0':'en-IN'}}
+                        </h2>
+                    </div>
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+            </div>
+            <!-- FILTER -->
+            <div class="filter-box">
+                <!-- Search -->
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search expense..." [(ngModel)]="searchText"
+                        (input)="applyFilters()">
+                </div>
+                <!-- Source -->
+                <select [(ngModel)]="selectedSource" (change)="applyFilters()">
+                    <option *ngFor="let source of sources" [value]="source">
+                        {{ source }}
+                    </option>
+                </select>
+                <!-- Month -->
+                <select [(ngModel)]="selectedMonth" (change)="applyFilters()">
+                    <option value="All">All</option>
+                    <option value="This Month">This Month</option>
+                    <option value="Last Month">Last Month</option>
+                </select>
+            </div>
+            <!-- TABLE -->
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Payment Type</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let expense of paginatedExpense">
+                            <td>
+                                {{ expense.date | date:'dd/MM/yyyy' }}
+                            </td>
+                            <td>
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                                {{ expense.source }}
+                            </td>
+                            <td>{{ expense.description }}</td>
+                            <td class="expense-amount">- ₹{{ expense.amount }}</td>
+                            <td>
+                                <span class="payment-badge" [class.cash-type]="expense.paymentType === 'Cash'"
+                                    [class.upi-type]="expense.paymentType === 'UPI'">
+                                    <i class="fa-solid" [class.fa-money-bill]="expense.paymentType === 'Cash'"
+                                        [class.fa-mobile-screen-button]="expense.paymentType === 'UPI'">
+                                    </i>
+                                    {{ expense.paymentType }}
+                                </span>
+                            </td>
+
+                            <td class="actions">
+                                <button class="edit" (click)="editExpense(expense)" title="Edit"
+                                    style="cursor: pointer;">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                                <button class="delete" (click)="deleteExpense(expense._id)" title="Delete"
+                                    style="cursor: pointer;">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- No Data -->
+                        <tr *ngIf="filteredExpense.length === 0">
+                            <td colspan="5" class="no-data">
+                                <div class="no-data-content">
+                                    <i class="fa-solid fa-receipt"></i>
+                                    <h4>No Data Found</h4>
+                                    <p>
+                                        No expenses found for the selected filter.
+                                    </p>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination" *ngIf="totalPages > 1">
+                    <!-- Previous -->
+                    <button class="page-btn" [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <!-- Page Numbers -->
+                    <button *ngFor="let page of [].constructor(totalPages);let i = index
+        " class="page-number" [class.active]="currentPage === i + 1" (click)="changePage(i + 1)">
+                        {{ i + 1 }}
+                    </button>
+                    <!-- Next -->
+                    <button class="page-btn" [disabled]="currentPage === totalPages"
+                        (click)="changePage(currentPage + 1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="modal-backdrop" *ngIf="showModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>
+                    {{isEditMode ? 'Edit Expense' : 'Add Expense'}}
+                </h2>
+                <button class="close-btn" (click)="closeModal()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form [formGroup]="expenseForm" (ngSubmit)="addExpense()">
+                <!-- Source -->
+                <div class="form-group">
+                    <label>Category</label>
+                    <select formControlName="source">
+                        <option value="" disabled>Select Category</option>
+                        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+                    </select>
+
+                    <small class="error" *ngIf="submitted && expenseForm.get('source')?.hasError('required')">Please
+                        select a category.</small>
+
+                </div>
+
+                <!-- Amount -->
+                <div class="form-group">
+                    <label>Amount</label>
+                    <input type="number" formControlName="amount" placeholder="Enter amount">
+                    <small class="error" *ngIf="submitted && expenseForm.get('amount')?.hasError('required')">Amount is
+                        required.</small>
+                    <small class="error" *ngIf="submitted && expenseForm.get('amount')?.hasError('min')">
+                        Amount must be greater than 0.
+                    </small>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Payment Type</label>
+                    <select formControlName="paymentType">
+                        <option value="" disabled>Select Payment Type</option>
+                        <option value="Cash">Cash</option>
+                        <option value="UPI">UPI</option>
+                    </select>
+                    <small class="error" *ngIf="submitted && expenseForm.get('paymentType')?.hasError('required')">
+                        Please select a payment type.
+                    </small>
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea rows="3" formControlName="description" placeholder="Enter expense description"></textarea>
+                    <small class="error" *ngIf="submitted && expenseForm.get('description')?.hasError('required')">
+                        Description is required.
+                    </small>
+                </div>
+                <!-- Date -->
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" formControlName="date">
+                    <small class="error" *ngIf="submitted && expenseForm.get('date')?.hasError('required')">Date is
+                        required.</small>
+                </div>
+                <!-- Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="cancel-btn" (click)="closeModal()">Cancel</button>
+                    <button type="submit" class="save-btn">
+                        {{ isEditMode ? 'Update Expense' : 'Save Expense' }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<ngx-spinner bdColor="rgba(15,23,42,0.75)" size="large" color="#2563EB" type="ball-clip-rotate-multiple"
+    [fullScreen]="true">
+    <p style="color:#eff0f3;font-size:16px;font-weight:600;">
+        Please wait...
+    </p>
+</ngx-spinner>
