@@ -39,7 +39,17 @@ module.exports = app;
 
 
 // DB
-require("../config/rPcvntunodEoi");
+
+const connectDB = require('../config/rPcvntunodEoi'); 
+
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    res.status(500).json({ status: false, message: 'Database connection failed' });
+  }
+});
 
 // other files
 const commonService = require("../config/msjoromicnveesc");
