@@ -36,3 +36,96 @@
 2026-10-18 14:56:53: Express server running on port 2563
 2026-10-18 14:56:53: Mongoose default connection open to DATE Sun Oct 18 2026 14:56:53 GMT+0530 (India Standard Time)
 2026-10-18 14:56:53: Connected successfully.
+2026-10-18 14:59:37: Express server running on port 2563
+2026-10-18 14:59:38: Mongoose default connection open to DATE Sun Oct 18 2026 14:59:38 GMT+0530 (India Standard Time)
+2026-10-18 14:59:38: Connected successfully.
+2026-10-18 15:03:22: Error: Cannot find module 'pdf-parse'
+2026-10-18 15:03:22: Require stack:
+2026-10-18 15:03:22: - D:\My Projects\Expense Tracker\backend\tllAioronaaMnlCB\sruoretreuss.js
+2026-10-18 15:03:22: - D:\My Projects\Expense Tracker\backend\ulorosrfeetd\llesoroenrurcts.js
+2026-10-18 15:03:22: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-10-18 15:03:22:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-10-18 15:03:22:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-10-18 15:03:22:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-10-18 15:03:22:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-10-18 15:03:22:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-10-18 15:03:22:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-10-18 15:03:22:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-10-18 15:03:22:     at require (node:internal/modules/helpers:153:16)
+2026-10-18 15:03:22:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\tllAioronaaMnlCB\sruoretreuss.js:18:18)
+2026-10-18 15:03:22:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-10-18 15:03:22:   code: 'MODULE_NOT_FOUND',
+2026-10-18 15:03:22:   requireStack: [
+2026-10-18 15:03:22:     'D:\\My Projects\\Expense Tracker\\backend\\tllAioronaaMnlCB\\sruoretreuss.js',
+2026-10-18 15:03:22:     'D:\\My Projects\\Expense Tracker\\backend\\ulorosrfeetd\\llesoroenrurcts.js',
+2026-10-18 15:03:22:     'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js'
+2026-10-18 15:03:22:   ]
+2026-10-18 15:03:22: }
+2026-10-18 15:03:24: Error: Cannot find module 'pdf-parse'
+2026-10-18 15:03:24: Require stack:
+2026-10-18 15:03:24: - D:\My Projects\Expense Tracker\backend\tllAioronaaMnlCB\sruoretreuss.js
+2026-10-18 15:03:24: - D:\My Projects\Expense Tracker\backend\ulorosrfeetd\llesoroenrurcts.js
+2026-10-18 15:03:24: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-10-18 15:03:24:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-10-18 15:03:24:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-10-18 15:03:24:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-10-18 15:03:24:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-10-18 15:03:24:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-10-18 15:03:24:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-10-18 15:03:24:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-10-18 15:03:24:     at require (node:internal/modules/helpers:153:16)
+2026-10-18 15:03:24:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\tllAioronaaMnlCB\sruoretreuss.js:18:18)
+2026-10-18 15:03:24:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-10-18 15:03:24:   code: 'MODULE_NOT_FOUND',
+2026-10-18 15:03:24:   requireStack: [
+2026-10-18 15:03:24:     'D:\\My Projects\\Expense Tracker\\backend\\tllAioronaaMnlCB\\sruoretreuss.js',
+2026-10-18 15:03:24:     'D:\\My Projects\\Expense Tracker\\backend\\ulorosrfeetd\\llesoroenrurcts.js',
+2026-10-18 15:03:24:     'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js'
+2026-10-18 15:03:24:   ]
+2026-10-18 15:03:24: }
+2026-10-18 15:03:26: Error: Cannot find module 'pdf-parse'
+2026-10-18 15:03:26: Require stack:
+2026-10-18 15:03:26: - D:\My Projects\Expense Tracker\backend\tllAioronaaMnlCB\sruoretreuss.js
+2026-10-18 15:03:26: - D:\My Projects\Expense Tracker\backend\ulorosrfeetd\llesoroenrurcts.js
+2026-10-18 15:03:26: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-10-18 15:03:26:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-10-18 15:03:26:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-10-18 15:03:26:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-10-18 15:03:26:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-10-18 15:03:26:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-10-18 15:03:26:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-10-18 15:03:26:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-10-18 15:03:26:     at require (node:internal/modules/helpers:153:16)
+2026-10-18 15:03:26:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\tllAioronaaMnlCB\sruoretreuss.js:18:18)
+2026-10-18 15:03:26:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-10-18 15:03:26:   code: 'MODULE_NOT_FOUND',
+2026-10-18 15:03:26:   requireStack: [
+2026-10-18 15:03:26:     'D:\\My Projects\\Expense Tracker\\backend\\tllAioronaaMnlCB\\sruoretreuss.js',
+2026-10-18 15:03:26:     'D:\\My Projects\\Expense Tracker\\backend\\ulorosrfeetd\\llesoroenrurcts.js',
+2026-10-18 15:03:26:     'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js'
+2026-10-18 15:03:26:   ]
+2026-10-18 15:03:26: }
+2026-10-18 15:03:30: Express server running on port 2563
+2026-10-18 15:03:31: Mongoose default connection open to DATE Sun Oct 18 2026 15:03:31 GMT+0530 (India Standard Time)
+2026-10-18 15:03:31: Connected successfully.
+2026-10-18 15:03:36: Express server running on port 2563
+2026-10-18 15:03:36: Mongoose default connection open to DATE Sun Oct 18 2026 15:03:36 GMT+0530 (India Standard Time)
+2026-10-18 15:03:36: Connected successfully.
+2026-10-18 15:04:01: D:\My Projects\Expense Tracker\backend\tllAioronaaMnlCB\sruoretreuss.js:22
+2026-10-18 15:04:01: const pdfParse = require('pdf-parse');
+2026-10-18 15:04:01:       ^
+2026-10-18 15:04:01: 
+2026-10-18 15:04:01: SyntaxError: Identifier 'pdfParse' has already been declared
+2026-10-18 15:04:01:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-10-18 15:04:01:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-10-18 15:04:01:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-10-18 15:04:01:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-10-18 15:04:01:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-10-18 15:04:01:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-10-18 15:04:01:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-10-18 15:04:01:     at require (node:internal/modules/helpers:153:16)
+2026-10-18 15:04:01:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\ulorosrfeetd\llesoroenrurcts.js:6:24)
+2026-10-18 15:04:01:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-10-18 15:04:05: Express server running on port 2563
+2026-10-18 15:04:05: Mongoose default connection open to DATE Sun Oct 18 2026 15:04:05 GMT+0530 (India Standard Time)
+2026-10-18 15:04:05: Connected successfully.

@@ -15,11 +15,10 @@ const users = require('../abamcSehal/ueldstiaessr');
 const common = require("../config/msjoromicnveesc");
 
 
-const pdfParse = require('pdf-parse');
 const Sale = require('../abamcSehal/Sale');
 
 const xlsx = require('xlsx');
-const { PDFParse } = require('pdf-parse');
+const pdfParse = require('pdf-parse');
 const Tesseract = require('tesseract.js');
 
 
@@ -1395,24 +1394,19 @@ exports.upload = async (req, res) => {
             }).filter(Boolean);
         }
 
-        // --- B. PDF PARSING ---
+        // B. PDF PARSING (v1.1.1 pure JS syntax)
         else if (originalName.endsWith('.pdf') || mime === 'application/pdf') {
-            let extractedText = '';
             try {
-                if (typeof PDFParse === 'function') {
-                    const data = await PDFParse(req.file.buffer);
-                    extractedText = data.text;
-                } else {
-                    const parser = new PDFParse({ data: new Uint8Array(req.file.buffer) });
-                    const pdfData = await parser.getText();
-                    extractedText = pdfData.text;
-                    if (parser.destroy) await parser.destroy();
-                }
+                const pdfData = await pdfParse(req.file.buffer);
+                records = parseTextToRecords(pdfData.text, currentUserId);
             } catch (pdfErr) {
-                return common.sendResponse(res, { status: false, data: null, message: 'PDF reading failed!' });
+                console.error('PDF parsing error:', pdfErr);
+                return common.sendResponse(res, {
+                    status: false,
+                    data: null,
+                    message: 'Failed to read PDF file!'
+                });
             }
-
-            records = parseTextToRecords(extractedText, currentUserId);
         }
 
         // --- C. IMAGE OCR ---
