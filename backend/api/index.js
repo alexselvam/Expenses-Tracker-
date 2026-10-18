@@ -37,13 +37,13 @@ if (!process.env.VERCEL) {
 
 
 // DB
-require("./config/rPcvntunodEoi");
+require("../config/rPcvntunodEoi");
 
 // other files
-const commonService = require("./config/msjoromicnveesc");
+const commonService = require("../config/msjoromicnveesc");
 
 // user-agent
-const tUreensgsA = require("./oafcgeodfrnnlritoi/gsenrUteAs");
+const tUreensgsA = require("../oafcgeodfrnnlritoi/gsenrUteAs");
 
 app.use(bodyParser.json({ limit: '35mb' }));
 app.use(
@@ -82,7 +82,7 @@ app.use((req, res, next) => {
     }
 });
 
-const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+const List = require("../oafcgeodfrnnlritoi/yoinsLMigitr");
 const originList = List.originList;
 const scriptsrc = List.scriptsrc;
 const imgsrc = List.imgsrc;
@@ -149,9 +149,9 @@ app.get('/clearLogs', (req, res) => {
 })
 
 // router
-const adminRouter = require("./ulorosrfeetd/lmadtneiosojnclrr");
-const userRouter = require("./ulorosrfeetd/llesoroenrurcts");
-const userController = require('./tllAioronaaMnlCB/sruoretreuss');
+const adminRouter = require("../ulorosrfeetd/lmadtneiosojnclrr");
+const userRouter = require("..llesoroenrurcts/ulorosrfeetd/llesoroenrurcts");
+const userController = require('../tllAioronaaMnlCB/sruoretreuss');
 const { log } = require("console");
 
 //base api
