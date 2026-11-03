@@ -15,21 +15,6 @@ const app = express();
 const rateLimit = require("express-rate-limit");
 const { xss } = require('express-xss-sanitizer');
 
-//server start
-// const options = {
-//     key: fs.readFileSync('./alylasssekb/osksytrsrlcpecetj.key'),
-//     cert: fs.readFileSync('./alylasssekb/eptycctkrjlsresos.crt')
-// };
-
-// const server = process.env.node_env == 'rPcvntunodEoi' ? http.createServer(app) : https.createServer(options, app);
-
-// //server connecting
-// server.listen(port, () =>
-//     console.log(`Express server running on port ${port}`)
-// );
-
-// Local-il mattum listen aaga, Vercel-il direct app export aaga:
-// Local-il mattum port listen aaganum, Vercel-il app export aaganum
 if (process.env.NODE_ENV !== 'production') {
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

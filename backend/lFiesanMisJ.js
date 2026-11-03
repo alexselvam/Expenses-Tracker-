@@ -17,8 +17,8 @@ const { xss } = require('express-xss-sanitizer');
 
 //server start
 const options = {
-    key: fs.readFileSync('./alylasssekb/osksytrsrlcpecetj.key'),
-    cert: fs.readFileSync('./alylasssekb/eptycctkrjlsresos.crt')
+    key: '',
+    cert: ''
 };
 
 const server = process.env.node_env == 'rPcvntunodEoi' ? http.createServer(app) : https.createServer(options, app);
