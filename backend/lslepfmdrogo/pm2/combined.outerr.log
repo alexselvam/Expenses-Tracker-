@@ -160,3 +160,398 @@
 2026-10-18 15:35:26: Express server running on port 2563
 2026-10-18 15:35:27: Mongoose default connection open at Sun Oct 18 2026 15:35:27 GMT+0530 (India Standard Time)
 2026-10-18 15:35:27: MongoDB Connected successfully to Atlas: 2026-10-18T10:05:27.146Z
+2026-11-03 08:08:04: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:08:06: Express server running on port 2563
+2026-11-03 08:08:06: Mongoose default connection open at Tue Nov 03 2026 08:08:06 GMT+0530 (India Standard Time)
+2026-11-03 08:08:06: MongoDB Connected successfully to Atlas: 2026-11-03T02:38:06.746Z
+2026-11-03 08:08:43: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:43: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:43:       ^
+2026-11-03 08:08:43: 
+2026-11-03 08:08:43: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:43:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:43:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:43:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:43:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:43:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:43:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:43:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:43:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:43:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:43:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:43: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:43: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:43:       ^
+2026-11-03 08:08:43: 
+2026-11-03 08:08:43: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:43:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:43:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:43:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:43:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:43:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:43:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:43:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:43:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:43:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:43:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:43: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:43: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:43:       ^
+2026-11-03 08:08:43: 
+2026-11-03 08:08:43: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:43:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:43:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:43:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:43:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:43:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:43:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:43:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:43:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:43:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:43:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:44: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:44:       ^
+2026-11-03 08:08:44: 
+2026-11-03 08:08:44: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:44:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:44: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:44:       ^
+2026-11-03 08:08:44: 
+2026-11-03 08:08:44: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:44:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:44: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:44:       ^
+2026-11-03 08:08:44: 
+2026-11-03 08:08:44: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:44:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:44: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:44:       ^
+2026-11-03 08:08:44: 
+2026-11-03 08:08:44: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:44:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:44: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:44:       ^
+2026-11-03 08:08:44: 
+2026-11-03 08:08:44: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:44:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:44: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:44:       ^
+2026-11-03 08:08:44: 
+2026-11-03 08:08:44: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:44:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:44:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:44:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:44:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:44:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:44:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:45: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:45:       ^
+2026-11-03 08:08:45: 
+2026-11-03 08:08:45: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:45:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:45: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:45:       ^
+2026-11-03 08:08:45: 
+2026-11-03 08:08:45: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:45:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:45: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:45:       ^
+2026-11-03 08:08:45: 
+2026-11-03 08:08:45: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:45:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:45: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:45:       ^
+2026-11-03 08:08:45: 
+2026-11-03 08:08:45: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:45:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:45: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:45:       ^
+2026-11-03 08:08:45: 
+2026-11-03 08:08:45: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:45:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:45: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:45:       ^
+2026-11-03 08:08:45: 
+2026-11-03 08:08:45: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:45:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:45:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:45:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:45:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:45:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:45:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:46: D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:81
+2026-11-03 08:08:46: const List = require("./oafcgeodfrnnlritoi/yoinsLMigitr");
+2026-11-03 08:08:46:       ^
+2026-11-03 08:08:46: 
+2026-11-03 08:08:46: SyntaxError: Identifier 'List' has already been declared
+2026-11-03 08:08:46:     at wrapSafe (node:internal/modules/cjs/loader:1804:18)
+2026-11-03 08:08:46:     at Module._compile (node:internal/modules/cjs/loader:1845:20)
+2026-11-03 08:08:46:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:46:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:46:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:46:     at Object.<anonymous> (C:\Users\Admin\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:32:23)
+2026-11-03 08:08:46:     at Module._compile (node:internal/modules/cjs/loader:1871:14)
+2026-11-03 08:08:46:     at Object..js (node:internal/modules/cjs/loader:2002:10)
+2026-11-03 08:08:46:     at Module.load (node:internal/modules/cjs/loader:1594:32)
+2026-11-03 08:08:46:     at Module._load (node:internal/modules/cjs/loader:1396:12)
+2026-11-03 08:08:57: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:08:57: Error: Cannot find module '../oafcgeodfrnnlritoi/ffBRrUJQT'
+2026-11-03 08:08:57: Require stack:
+2026-11-03 08:08:57: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-11-03 08:08:57:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-11-03 08:08:57:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-11-03 08:08:57:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-11-03 08:08:57:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-11-03 08:08:57:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-11-03 08:08:57:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-11-03 08:08:57:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-11-03 08:08:57:     at require (node:internal/modules/helpers:153:16)
+2026-11-03 08:08:57:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:40:15)
+2026-11-03 08:08:57:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-11-03 08:08:57:   code: 'MODULE_NOT_FOUND',
+2026-11-03 08:08:57:   requireStack: [ 'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js' ]
+2026-11-03 08:08:57: }
+2026-11-03 08:08:58: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:08:58: Error: Cannot find module '../oafcgeodfrnnlritoi/ffBRrUJQT'
+2026-11-03 08:08:58: Require stack:
+2026-11-03 08:08:58: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-11-03 08:08:58:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-11-03 08:08:58:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-11-03 08:08:58:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-11-03 08:08:58:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-11-03 08:08:58:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-11-03 08:08:58:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-11-03 08:08:58:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-11-03 08:08:58:     at require (node:internal/modules/helpers:153:16)
+2026-11-03 08:08:58:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:40:15)
+2026-11-03 08:08:58:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-11-03 08:08:58:   code: 'MODULE_NOT_FOUND',
+2026-11-03 08:08:58:   requireStack: [ 'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js' ]
+2026-11-03 08:08:58: }
+2026-11-03 08:08:59: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:08:59: Error: Cannot find module '../oafcgeodfrnnlritoi/ffBRrUJQT'
+2026-11-03 08:08:59: Require stack:
+2026-11-03 08:08:59: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-11-03 08:08:59:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-11-03 08:08:59:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-11-03 08:08:59:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-11-03 08:08:59:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-11-03 08:08:59:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-11-03 08:08:59:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-11-03 08:08:59:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-11-03 08:08:59:     at require (node:internal/modules/helpers:153:16)
+2026-11-03 08:08:59:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:40:15)
+2026-11-03 08:08:59:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-11-03 08:08:59:   code: 'MODULE_NOT_FOUND',
+2026-11-03 08:08:59:   requireStack: [ 'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js' ]
+2026-11-03 08:08:59: }
+2026-11-03 08:09:00: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:09:00: Error: Cannot find module '../oafcgeodfrnnlritoi/ffBRrUJQT'
+2026-11-03 08:09:00: Require stack:
+2026-11-03 08:09:00: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-11-03 08:09:00:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-11-03 08:09:00:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-11-03 08:09:00:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-11-03 08:09:00:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-11-03 08:09:00:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-11-03 08:09:00:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-11-03 08:09:00:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-11-03 08:09:00:     at require (node:internal/modules/helpers:153:16)
+2026-11-03 08:09:00:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:40:15)
+2026-11-03 08:09:00:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-11-03 08:09:00:   code: 'MODULE_NOT_FOUND',
+2026-11-03 08:09:00:   requireStack: [ 'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js' ]
+2026-11-03 08:09:00: }
+2026-11-03 08:09:02: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:09:02: Error: Cannot find module '../oafcgeodfrnnlritoi/ffBRrUJQT'
+2026-11-03 08:09:02: Require stack:
+2026-11-03 08:09:02: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-11-03 08:09:02:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-11-03 08:09:02:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-11-03 08:09:02:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-11-03 08:09:02:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-11-03 08:09:02:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-11-03 08:09:02:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-11-03 08:09:02:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-11-03 08:09:02:     at require (node:internal/modules/helpers:153:16)
+2026-11-03 08:09:02:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:40:15)
+2026-11-03 08:09:02:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-11-03 08:09:02:   code: 'MODULE_NOT_FOUND',
+2026-11-03 08:09:02:   requireStack: [ 'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js' ]
+2026-11-03 08:09:02: }
+2026-11-03 08:09:03: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:09:03: Error: Cannot find module '../oafcgeodfrnnlritoi/ffBRrUJQT'
+2026-11-03 08:09:03: Require stack:
+2026-11-03 08:09:03: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-11-03 08:09:03:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-11-03 08:09:03:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-11-03 08:09:03:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-11-03 08:09:03:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-11-03 08:09:03:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-11-03 08:09:03:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-11-03 08:09:03:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-11-03 08:09:03:     at require (node:internal/modules/helpers:153:16)
+2026-11-03 08:09:03:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:40:15)
+2026-11-03 08:09:03:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-11-03 08:09:03:   code: 'MODULE_NOT_FOUND',
+2026-11-03 08:09:03:   requireStack: [ 'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js' ]
+2026-11-03 08:09:03: }
+2026-11-03 08:09:05: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:09:05: Error: Cannot find module '../oafcgeodfrnnlritoi/ffBRrUJQT'
+2026-11-03 08:09:05: Require stack:
+2026-11-03 08:09:05: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-11-03 08:09:05:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-11-03 08:09:05:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-11-03 08:09:05:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-11-03 08:09:05:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-11-03 08:09:05:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-11-03 08:09:05:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-11-03 08:09:05:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-11-03 08:09:05:     at require (node:internal/modules/helpers:153:16)
+2026-11-03 08:09:05:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:40:15)
+2026-11-03 08:09:05:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-11-03 08:09:05:   code: 'MODULE_NOT_FOUND',
+2026-11-03 08:09:05:   requireStack: [ 'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js' ]
+2026-11-03 08:09:05: }
+2026-11-03 08:09:06: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:09:06: Error: Cannot find module '../oafcgeodfrnnlritoi/ffBRrUJQT'
+2026-11-03 08:09:06: Require stack:
+2026-11-03 08:09:06: - D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js
+2026-11-03 08:09:06:     at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)
+2026-11-03 08:09:06:     at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+2026-11-03 08:09:06:     at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+2026-11-03 08:09:06:     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+2026-11-03 08:09:06:     at Module._load (node:internal/modules/cjs/loader:1294:5)
+2026-11-03 08:09:06:     at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+2026-11-03 08:09:06:     at Module.require (node:internal/modules/cjs/loader:1617:12)
+2026-11-03 08:09:06:     at require (node:internal/modules/helpers:153:16)
+2026-11-03 08:09:06:     at Object.<anonymous> (D:\My Projects\Expense Tracker\backend\lFiesanMisJ.js:40:15)
+2026-11-03 08:09:06:     at Module._compile (node:internal/modules/cjs/loader:1871:14) {
+2026-11-03 08:09:06:   code: 'MODULE_NOT_FOUND',
+2026-11-03 08:09:06:   requireStack: [ 'D:\\My Projects\\Expense Tracker\\backend\\lFiesanMisJ.js' ]
+2026-11-03 08:09:06: }
+2026-11-03 08:09:09: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:09:09: [
+2026-11-03 08:09:09:   'http://localhost:4200',
+2026-11-03 08:09:09:   'http://localhost:4200/',
+2026-11-03 08:09:09:   'http://localhost:4201',
+2026-11-03 08:09:09:   'http://localhost:4201/',
+2026-11-03 08:09:09:   'https://expenses-tracker-pi-pearl.vercel.app/',
+2026-11-03 08:09:09:   'https://expenses-tracker-pi-pearl.vercel.app',
+2026-11-03 08:09:09:   'https://expenses-tracker-pi-pearl.vercel.app/v1/',
+2026-11-03 08:09:09:   'https://expenses-tracker-pi-pearl.vercel.app/v1'
+2026-11-03 08:09:09: ] ::::::::::::::::::::::::::::::
+2026-11-03 08:09:10: Express server running on port 2563
+2026-11-03 08:09:11: Mongoose default connection open at Tue Nov 03 2026 08:09:11 GMT+0530 (India Standard Time)
+2026-11-03 08:09:11: MongoDB Connected successfully to Atlas: 2026-11-03T02:39:11.225Z
+2026-11-03 08:09:32: Mongoose default connection disconnected at 2026-11-03T02:39:32.711Z

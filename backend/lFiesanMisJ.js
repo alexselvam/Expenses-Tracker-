@@ -37,6 +37,10 @@ const commonService = require("./config/msjoromicnveesc");
 // user-agent
 const tUreensgsA = require("./oafcgeodfrnnlritoi/gsenrUteAs");
 
+const Lists = require("./oafcgeodfrnnlritoi/ffBRrUJQT");
+console.log(Lists,"::::::::::::::::::::::::::::::")
+
+
 app.use(bodyParser.json({ limit: '35mb' }));
 app.use(
     bodyParser.urlencoded({

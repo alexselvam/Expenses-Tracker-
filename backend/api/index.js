@@ -79,8 +79,9 @@ app.use((req, res, next) => {
     }
 });
 
-const List = require("../oafcgeodfrnnlritoi/yoinsLMigitr");
-const originList = List.originList;
+const List = require("../oafcgeodfrnnlritoi/ffBRrUJQT");
+console.log(List,"::::::::::::::::::::::::::::::")
+const originList = List;
 const scriptsrc = List.scriptsrc;
 const imgsrc = List.imgsrc;
 
