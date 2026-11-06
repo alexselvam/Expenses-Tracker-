@@ -709,3 +709,17 @@
 2026-11-03 08:23:04: Express server running on port 2563
 2026-11-03 08:23:05: Mongoose default connection open at Tue Nov 03 2026 08:23:05 GMT+0530 (India Standard Time)
 2026-11-03 08:23:05: MongoDB Connected successfully to Atlas: 2026-11-03T02:53:05.246Z
+2026-11-03 08:23:22: Initiating MongoDB Connection to Atlas...
+2026-11-03 08:23:22: [
+2026-11-03 08:23:22:   'http://localhost:4200',
+2026-11-03 08:23:22:   'http://localhost:4200/',
+2026-11-03 08:23:22:   'http://localhost:4201',
+2026-11-03 08:23:22:   'http://localhost:4201/',
+2026-11-03 08:23:22:   'https://expenses-tracker-pi-pearl.vercel.app/',
+2026-11-03 08:23:22:   'https://expenses-tracker-pi-pearl.vercel.app',
+2026-11-03 08:23:22:   'https://expenses-tracker-pi-pearl.vercel.app/v1/',
+2026-11-03 08:23:22:   'https://expenses-tracker-pi-pearl.vercel.app/v1'
+2026-11-03 08:23:22: ] ::::::::::::::::::::::::::::::
+2026-11-03 08:23:23: Express server running on port 2563
+2026-11-03 08:23:24: Mongoose default connection open at Tue Nov 03 2026 08:23:24 GMT+0530 (India Standard Time)
+2026-11-03 08:23:24: MongoDB Connected successfully to Atlas: 2026-11-03T02:53:24.270Z

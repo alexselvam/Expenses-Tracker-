@@ -3,10 +3,6 @@ const originList = [
     "http://localhost:4200/",
     "http://localhost:4201",
     "http://localhost:4201/",
-    //  "http://10.140.241.129:4200/",
-    //   "http://10.140.241.129:4200",
-    //   "http://157.51.0.19:4200/",
-    //  "http://157.51.0.19:4200/"
     "https://expenses-tracker-pi-pearl.vercel.app/",
     "https://expenses-tracker-pi-pearl.vercel.app",
     "https://expenses-tracker-pi-pearl.vercel.app/v1/",
@@ -17,11 +13,9 @@ const originList = [
 ];
 
 const scriptsrc = [
-    // "'self'", 'https://metatronclub.osizdemos.com', 'https://metatronclubadmin.osizdemos.com'
 ];
 
 const imgsrc = [
-    // "'self'", 'https://dexrebrand.s3.amazonaws.com/', 'https://metatronclub.osizdemos.com', 'https://metatronclubadmin.osizdemos.com', 'https', 'data'
 ];
 
 const F_Domain = "";
